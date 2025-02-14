@@ -38,7 +38,7 @@ app.get('/referral', async (req, res) => {
     }
 
     try {
-        // // Step 2: Store data in the database
+        // Step 2: Store data in the database
         // const referral = await prisma.referral.create({
         //     data: { referrerName, referrerEmail, refereeName, refereeEmail, course },
         // });
@@ -53,7 +53,7 @@ app.get('/referral', async (req, res) => {
 
         await transporter.sendMail(mailOptions);
 
-        res.status(201).json({ message: 'Referral saved & email sent successfully', referral });
+        res.status(201).json({ message: 'Referral saved & email sent successfully' });
     } catch (error) {
         res.status(500).json({ error: 'Database or email error', details: error.message });
     }
