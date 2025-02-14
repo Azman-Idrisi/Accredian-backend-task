@@ -38,10 +38,10 @@ app.get('/referral', async (req, res) => {
     }
 
     try {
-        // Step 2: Store data in the database
-        const referral = await prisma.referral.create({
-            data: { referrerName, referrerEmail, refereeName, refereeEmail, course },
-        });
+        // // Step 2: Store data in the database
+        // const referral = await prisma.referral.create({
+        //     data: { referrerName, referrerEmail, refereeName, refereeEmail, course },
+        // });
 
         // Step 3: Send email notification
         const mailOptions = {
